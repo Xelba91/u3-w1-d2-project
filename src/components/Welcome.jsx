@@ -9,7 +9,7 @@ const Welcome = function () {
     <>
       <Alert show={show} variant="success" className="my-2">
         <Alert.Heading className="text-center">Benvenuto nella mia libreria</Alert.Heading>
-        <p className="text-center">Accat o libr si no abbusc</p>
+        <p className="text-center">Libreria Digitale </p>
         <hr />
         <div className="d-flex justify-content-end">
           <Button onClick={() => setShow(false)} variant="outline-success">

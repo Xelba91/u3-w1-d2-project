@@ -16,14 +16,6 @@ function App() {
       <Container fluid>
         <Row className="justify-content-center gap-2 mb-2">
           <AllTheBooks></AllTheBooks>
-          <AllTheBooks></AllTheBooks>
-          <AllTheBooks></AllTheBooks>
-          <AllTheBooks></AllTheBooks>
-          <AllTheBooks></AllTheBooks>
-          <AllTheBooks></AllTheBooks>
-          <AllTheBooks></AllTheBooks>
-          <AllTheBooks></AllTheBooks>
-          <AllTheBooks></AllTheBooks>
         </Row>
       </Container>
       <MyFooter></MyFooter>

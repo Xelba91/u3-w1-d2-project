@@ -8,12 +8,14 @@ const AllTheBooks = function () {
     <>
       {fantasy.map((book) => (
         <Card key={book.id} style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={book.img} />
-          <Card.Body>
+          <Card.Img variant="top" src={book.img} style={{ height: "300px" }} />
+          <Card.Body className="d-flex flex-column">
             <Card.Title>{book.title}</Card.Title>
-            <Card.Text>{book.price} €</Card.Text>
-            <Card.Text>Genere - {book.category}</Card.Text>
-            <Button variant="primary">Aggiungi al carrello</Button>
+            <Card.Text>Prezzo: {book.price}€</Card.Text>
+            <Card.Text className="mt-auto">Genere - {book.category}</Card.Text>
+            <Button className="align-items-baseline" variant="primary">
+              Aggiungi al carrello
+            </Button>
           </Card.Body>
         </Card>
       ))}

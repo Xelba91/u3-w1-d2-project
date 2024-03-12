@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 const MyNav = function (props) {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary fixed-top" bg="dark" data-bs-theme="dark">
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary sticky-top" bg="dark" data-bs-theme="dark">
       <Container fluid>
         <Navbar.Brand href="#home">
           IFOA Library - <span className="text-info"> {props.subtitle}</span>{" "}
