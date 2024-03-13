@@ -7,7 +7,7 @@ const AllTheBooks = function () {
   return (
     <>
       {fantasy.map((book) => (
-        <Card key={book.id} style={{ width: "18rem" }}>
+        <Card className="px-0" id="transform" key={book.id} style={{ width: "18rem" }}>
           <Card.Img variant="top" src={book.img} style={{ height: "300px" }} />
           <Card.Body className="d-flex flex-column">
             <Card.Title>{book.title}</Card.Title>
