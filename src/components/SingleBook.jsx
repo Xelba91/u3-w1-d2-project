@@ -1,6 +1,7 @@
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Component } from "react";
+import CommentArea from "./CommentArea";
 
 class SingleBook extends Component {
   state = {
@@ -13,18 +14,42 @@ class SingleBook extends Component {
     }));
   };
 
-  //   render() {
-  //     const { id, img, title, price, category } = this.props.book;
-  //     const cardStyle = this.state.selected ? { border: "2px solid red" } : {};
+  // fetchComments = () => {
+  // fetch("https://striveschool-api.herokuapp.com/api/comments/", {
+  //   headers: {
+  //     Authorization:
+  //       "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NWYzMTFhMDcxYWZhZjAwMTkxNTY2ZWYiLCJpYXQiOjE3MTA0Mjg1NzYsImV4cCI6MTcxMTYzODE3Nn0.P9iro7jpWRHV5ciBePMfX4Cl20zYvs-Y5pGNs037EVI",
+  //   },
+  //   })
+  //     .then((response) => {
+  //       if (response.ok) {
+  //         return response.json();
+  //       } else {
+  //         throw new Error("Problema nella chiamata API");
+  //       }
+  //     })
+  //     .then((commentsFromAPI) => {
+  //       console.log("COMMENTS", commentsFromAPI);
 
-  // return (
-  //   <Card
-  //     onClick={this.handleCardClick}
-  //     id="transform"
-  //     className="px-0"
-  //     key={id}
-  //     style={{ width: "18rem", ...cardStyle }}
-  //   >
+  //       this.setState({
+  //         reservations: commentsFromAPI,
+  //         isLoading: false,
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.log("ERRORE", error);
+  //       this.setState({
+  //         isLoading: false,
+  //         isError: true,
+  //       });
+  //     });
+  // };
+
+  // componentDidMount() {
+  //   console.log("IO SONO COMPONENTDIDMOUNT");
+
+  //   this.fetchComments();
+  // }
 
   render() {
     const { id, img, title, price, category } = this.props.book;
@@ -47,6 +72,8 @@ class SingleBook extends Component {
           <Card.Title>{title}</Card.Title>
           <Card.Text className="mt-auto">Genere - {category}</Card.Text>
           <Card.Text>Prezzo: {price}€</Card.Text>
+
+          {this.state.selected === true && <CommentArea asin={this.props.book.asin} />}
           <Button className="align-items-baseline" variant="primary">
             Aggiungi al carrello
           </Button>
